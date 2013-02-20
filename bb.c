@@ -14,28 +14,8 @@ using namespace std;
 
 map<string,string> functions;
 
-void couthelp() {
-	cout <<
-		"bb - a brainbang interpreter\n" <<
-		"(C) 2013 MIT License\tRobert Perce\trobert.perce@gmail.com\n" <<
-		"\nUsage information:\n" <<
-		"\tbb [options] inputfile\n" <<
-		"\nAvailable options:\n" <<
-		"\t-s <num>\t\tNumber of cells (default 10000)\n" <<
-		"\t--size <num>\n\n" <<
-		"\t-v <bool>\t\tLoop values (default true).  If true, 0-1=255 and 255+1=0.\n" <<
-		"\t--loopval <bool>\n\n" <<
-		"\t-p <bool>\t\tLoop pointer (default false).  If true, at 0 '<' moves to the end.\n" <<
-		"\t--looppoint <bool>\n\n" <<
-		"\t-c\t\t\tOutput code (default false).  If true, outputs only brainfuck code.\n" <<
-		"\t--codeoutput\n\n" <<
-		"\t-n\t\t\tOutput as numbers, not characters (default false).  Newlines are still newlines.\n" <<
-		"\t--numout\n\n" <<
-		"\t-t\t\t\tDon't limit to 0-255 (default false): allow large and negative numbers.  Implies -n.\n" <<
-		"\t--nolimit\n\n" <<
-		"\t-h\t\t\tPrint this message\n" <<
-		"\t--help" << endl;
-}
+void couthelp();
+
 string trim(string s) {
 	string out = "";
 	int start,end;
@@ -303,4 +283,26 @@ int main(int len,char* args[]) {
 	}
 
 	return 0;
+}
+void couthelp() {
+	cout <<
+		"bb - a brainbang interpreter\n" <<
+		"(C) 2013 MIT License\tRobert Perce\trobert.perce@gmail.com\n" <<
+		"\nUsage information:\n" <<
+		"\tbb [options] inputfile\n" <<
+		"\nAvailable options:\n" <<
+		"\t-s <num>\t\tNumber of cells (default 10000)\n" <<
+		"\t--size <num>\n\n" <<
+		"\t-v <bool>\t\tLoop values (default true).  If true, 0-1=255 and 255+1=0.\n" <<
+		"\t--loopval <bool>\n\n" <<
+		"\t-p <bool>\t\tLoop pointer (default false).  If true, at 0 '<' moves to the end.\n" <<
+		"\t--looppoint <bool>\n\n" <<
+		"\t-c\t\t\tOutput code (default false).  If true, outputs only brainfuck code.\n" <<
+		"\t--codeoutput\n\n" <<
+		"\t-n\t\t\tOutput as numbers, not characters (default false).  Newlines are still newlines.\n" <<
+		"\t--numout\n\n" <<
+		"\t-t\t\t\tDon't limit to 0-255 (default false): allow large and negative numbers.  Implies -n.\n" <<
+		"\t--nolimit\n\n" <<
+		"\t-h\t\t\tPrint this message\n" <<
+		"\t--help" << endl;
 }

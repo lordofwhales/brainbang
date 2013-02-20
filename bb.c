@@ -277,7 +277,7 @@ int main(int len,char* args[]) {
 						 } else p--; break;
 			case '.': if(a[p]=='\n') cout << endl;
 						 else if(numout) cout << int(a[p]);
-						 else cout << a[p]; break;
+						 else cout << char(a[p]); break;
 			case ',': cin >> bit; a[p] = bit[0]; break;
 		}
 	}
